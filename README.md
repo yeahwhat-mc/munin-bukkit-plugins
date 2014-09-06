@@ -2,7 +2,7 @@
 
 This repository contains some useful [Munin](http://munin-monitoring.org/) plugins to monitor and observe a [Bukkit](http://bukkit.org) server:
 
-* **mcjsonplayers** - players currently online 
+* **mcjsonplayers** - players currently online
 * **mcjsonramusage** - RAM usage
 * **mcjsontps** - TPS (ticks per second)
 * **mcsqls2killshostile** - hostile mob kills
@@ -46,10 +46,14 @@ Read more in my [blog post](http://blog.frd.mn/munin-bukkit-plugins/).
 
 To setup alerts and limits add the following lines in your specific node in the `munin.conf` file:
 
-	[kotor.yeahwh.at]
+	[obi-wan.yeahwh.at]
 	   address 5.9.115.5
 	   [...]
 	   mctps_main.warning 19.9:      # Warning alert on < 19.9
 	   mctps_main.critical 19:		# Critical alert on < 19.0
 	   mcplayer_main.warning 20		# Warning alert when there are 20 players online
 	   mcplayer_main.critical 30		# Critical alert when there are more than 30 players online
+
+## License
+
+[WTFPL](LICENSE)
