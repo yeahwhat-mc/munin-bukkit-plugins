@@ -1,18 +1,18 @@
-#!/usr/bin/php  
+#!/usr/bin/php
 <?php
 /**
  * Bukkit/MySQL Munin plugin
  * ---------------------------------
  * Passive mob kills per day
- * 
- * Shows the passive kills of neutral mobs 
+ *
+ * Shows the passive kills of neutral mobs
  * via Statistician (http://s.frd.mn/14qKXTM)
- * 
- * Read more about my plugins on my blog: 
+ *
+ * Read more about my plugins on my blog:
  * http://s.frd.mn/XJsryR
  *
  * Author: Jonas Friedmann (http://frd.mn)
- * 
+ *
  */
 
 /**
@@ -32,7 +32,7 @@ $port     = 3306;
 if ((count($argv) > 1) && ($argv[1] == 'config'))
 {
 print("graph_title Bukkit / Statistician - passive mob kills per day
-graph_category bukkit_sql_kills
+graph_category bukkit
 graph_vlabel passive mob kills per day
 graph_args --base 1000 -l 0
 bat.type GAUGE
@@ -57,7 +57,7 @@ villager.label killed villager
 exit();
 }
 
-// Construct 'minumum' timstamp 
+// Construct 'minumum' timstamp
 $current = mktime();
 $today = mktime(0, 0, 0, date("n", $current), date("j", $current), date("Y", $current));
 
