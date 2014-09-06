@@ -2,33 +2,33 @@
 
 This repository contains some useful [Munin](http://munin-monitoring.org/) plugins to monitor and observe a [Bukkit](http://bukkit.org) server:
 
-* **mcjsonplayers** - players currently online
-* **mcjsonramusage** - RAM usage
-* **mcjsontps** - TPS (ticks per second)
-* **mcsqls2killshostile** - hostile mob kills
-* **mcsqls2killsneutral** - neutral mob kills
-* **mcsqls2killspassive** - passive mob kills
-* **mcsqls2players** - new players per day
-* **mcsqlubshame** - kicks/bans/mutes/etc. per day
+* **bukkit-jsonapi-players** - players currently online
+* **bukkit-jsonapi-ramusage** - RAM usage
+* **bukkit-jsonapi-tps** - TPS (ticks per second)
+* **bukkit-statistician-killshostile** - hostile mob kills
+* **bukkit-statistician-killsneutral** - neutral mob kills
+* **bukkit-statistician-killspassive** - passive mob kills
+* **bukkit-statistician-players** - new players per day
+* **bukkit-ultrabans-shame** - kicks/bans/mutes/etc. per day
 
-mcjson* requires [JSONAPI](https://github.com/alecgorge/jsonapi/)  
-mcsqls2* requires [Statistician](http://dev.bukkit.org/server-mods/statisticianv2/)  
-mcsqlub* requires [Ultrabans](http://dev.bukkit.org/server-mods/ultrabans/)  
+bukkit-jsonapi-* requires [JSONAPI](https://github.com/alecgorge/jsonapi/)  
+bukkit-statistician-* requires [Statistician](http://dev.bukkit.org/server-mods/statisticianv2/)  
+bukkit-ultrabans-* requires [Ultrabans](http://dev.bukkit.org/server-mods/ultrabans/)  
 
 Read more in my [blog post](http://blog.frd.mn/munin-bukkit-plugins/).
 
 ## Requirements
 
 * Web server with `PHP` support and Munin (2)
-* Bukkit server with JSONAPI for the JSONAPI plugins (`mcjson*`)
-* Bukkit server with Ultrabans for the Ultrabans plugins (`mcsqlub*`)
-* Bukkit server with Statistician for the MySQL plugins  (`mcsqls2*`)
+* Bukkit server with JSONAPI for the JSONAPI plugins (`bukkit-jsonapi-*`)
+* Bukkit server with Ultrabans for the Ultrabans plugins (`bukkit-ultrabans-*`)
+* Bukkit server with Statistician for the MySQL plugins  (`bukkit-statistician-*`)
 * MySQL server for the SQL plugins
 
 ## Configuration
 
 1. Clone this repository: `git clone git@github.com:frdmn/munin-bukkit-plugins.git`
-1. Adjust the JSONAPI variables in the mcjson* files
+1. Adjust the JSONAPI variables in the bukkit-jsonapi-* files
 1. Adjust the MySQL variables in the mcsql* files
 1. Make sure the `PHP` binary in the Shebang line is executable
 
